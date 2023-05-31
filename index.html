@@ -26,6 +26,35 @@
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- style for video in header section -->
+    <style>
+      .swiper-slide {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* Aspect ratio 16:9 (3320 / 5901 * 100) */
+      }
+    
+      .swiper-slide .content {
+        position: relative;
+        z-index: 1;
+        padding: 20px;
+        color: #fff;
+      }
+    
+      .swiper-slide video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+
+    <!-- end -->
+
+
   </head>
   <body>
     <!-- header section starts  -->
@@ -115,9 +144,9 @@
     <!-- home section starts  -->
 
     <section class="home" id="home">
-      <div class="swiper home-slider">
-        <div class="swiper-wrapper">
-          <section
+      <!-- <div class="swiper home-slider"> -->
+        <!-- <div class="swiper-wrapper"> -->
+          <!-- <section
             class="swiper-slide slide"
             style="background: url(images/slide-1.jpg) no-repeat"
           >
@@ -129,7 +158,19 @@
               </p>
               <a href="#about" class="btn">get started</a>
             </div>
+          </section> -->
+
+          <section class="swiper-slide slide">
+            <div class="content">
+              <h3>we provide best service</h3>
+              <p>
+                <h4>Shiva Shakthi Constructions Private Limited</h4> is a Symbol of Quality and client satisfaction is its first preference.
+              </p>
+              <a href="#about" class="btn">get started</a>
+            </div>
+            <video src="images/time1.mp4" autoplay muted loop></video>
           </section>
+          
 
           <!-- <section
             class="swiper-slide slide"
@@ -158,11 +199,11 @@
               <a href="#about" class="btn">get started</a>
             </div>
           </section> -->
-        </div>
+        <!-- </div> -->
 
         <!-- <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div> -->
-      </div>
+      <!-- </div> -->
     </section>
 
     <!-- home section ends -->
