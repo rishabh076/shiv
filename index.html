@@ -29,27 +29,34 @@
 
     <!-- style for video in header section -->
     <style>
-      .swiper-slide {
-        position: relative;
-        width: 100%;
-        padding-bottom: 56.25%; /* Aspect ratio 16:9 (3320 / 5901 * 100) */
-      }
-    
-      .swiper-slide .content {
-        position: relative;
-        z-index: 1;
-        padding: 20px;
-        color: #fff;
-      }
-    
-      .swiper-slide video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 50%;
-        object-fit: cover;
-      }
+     .slide {
+     display: flex;
+     align-items: center;
+     position: relative;
+     background-size: cover !important;
+     background-position: center !important;
+     /* height: 100%; */
+  }
+
+    .slide video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+  .slide .content {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Adjust the styles as per your requirement */
+
     </style>
 
     <!-- end -->
@@ -146,10 +153,14 @@
     <section class="home" id="home">
       <!-- <div class="swiper home-slider"> -->
         <!-- <div class="swiper-wrapper"> -->
+
           <!-- <section
             class="swiper-slide slide"
-            style="background: url(images/slide-1.jpg) no-repeat"
+        
           >
+          <video autoplay loop muted plays-inline class="back">
+            <source src="images/time1.mp4" type="video/mp4">
+          </video>
             <div class="content">
               <h3>we provide best service</h3>
               <p>
@@ -159,8 +170,8 @@
               <a href="#about" class="btn">get started</a>
             </div>
           </section> -->
-
-          <section class="swiper-slide slide">
+          <section class="swiper-slide slide" id="sect">
+            <video src="images/time1.mp4" autoplay muted loop></video>
             <div class="content">
               <h3>we provide best service</h3>
               <p>
@@ -168,8 +179,10 @@
               </p>
               <a href="#about" class="btn">get started</a>
             </div>
-            <video src="images/time1.mp4" autoplay muted loop></video>
           </section>
+          
+
+        
           
 
           <!-- <section
